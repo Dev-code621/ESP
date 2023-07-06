@@ -276,7 +276,7 @@ public class BLETransport implements Transport {
             } else {
 
                 BluetoothGattCharacteristic characteristic = service.getCharacteristic(UUID.fromString(uuidMap.get(ESPConstants.HANDLER_PROTO_VER)));
-
+ 
                 if (characteristic != null) {
                     // Write anything. It doesn't matter. We need to read characteristic and for that we need to write something.
                     characteristic.setValue("ESP");
